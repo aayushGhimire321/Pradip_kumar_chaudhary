@@ -1,0 +1,7 @@
+# robots.txt for Pradip kumar Chaudhary site
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Point to sitemap (replace example.com with your real domain before publishing)
+Sitemap: https://example.com/sitemap.xml
