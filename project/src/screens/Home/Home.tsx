@@ -1,0 +1,136 @@
+// React import removed because JSX runtime is automatic in this project (no direct React symbol usage)
+import { Button } from "../../components/ui/button";
+import { Link } from "react-router-dom";
+import HeroImage from "../../components/ui/HeroImage";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+
+export const Home = (): JSX.Element => {
+  return (
+    <div className="bg-white w-full relative">
+      <Header activePage="Home" />
+      <section className="relative w-full h-auto md:h-[640px] bg-gradient-to-br from-slate-50 to-white">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* decorative soft blob */}
+          <div className="hidden md:block absolute -right-40 top-10 w-[520px] h-[520px] bg-gradient-to-tr from-[#e6f0ff] to-[#f8fafc] rounded-full opacity-60 transform rotate-12 filter blur-3xl" />
+        </div>
+
+        <div className="relative md:absolute md:top-1/2 md:left-40 md:-translate-y-1/2 max-w-xl md:max-w-2xl px-6 md:px-0">
+          <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#0f2650] text-4xl md:text-6xl tracking-tight leading-tight mb-4">
+            Pradip Kumar Chaudhary
+          </h1>
+          <p className="[font-family:'Playfair_Display',Helvetica] font-medium text-[#263247] text-lg md:text-2xl tracking-normal leading-8 mb-6">
+            Actor • Playwright • Director
+          </p>
+
+          <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#36454f] text-base md:text-lg tracking-[0] leading-7 mb-8 max-w-xl">
+            Bringing characters to life with passion and authenticity. Associated with Mandala Theatre Nepal, Pradip's work explores Nepali narratives and social themes rooted in local culture.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <Button asChild className="bg-[#18386e] text-white px-6 py-3 text-base h-auto rounded-md shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl">
+              <Link to="/portfolio">View Portfolio</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-[#18386e] text-[#18386e] hover:bg-[#18386e]/10 px-6 py-3 text-base h-auto rounded-md">
+              <Link to="/contact">Get in Touch</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Right-side hero image - replace /images/hero-photo.svg with your actual photo */}
+        <div className="hidden md:block md:absolute md:top-1/2 md:right-40 md:-translate-y-1/2 w-[420px] h-[520px]">
+          <div className="relative">
+            <HeroImage
+              src="/images/pkdai2.jpg"
+              alt="Pradip Kumar Chaudhary"
+              caption="Pradip Kumar Chaudhary"
+              rotate={6}
+              className="md:!w-[420px] md:!h-[520px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full py-24 bg-white">
+        <div className="container mx-auto px-40">
+          <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-6 text-center">
+            Featured Work
+          </h2>
+          <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-16 text-center max-w-3xl mx-auto">
+            Explore some of my most memorable performances and projects.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+             {[
+               {
+                 title: "Jhimke Mama",
+                 type: "Play (Director & Writer)",
+                 description:
+                   "An original play (2020) written and directed by Pradip Kumar Chaudhary, based on a real story by Durga Prasad Pandey. Set in the village of Deurali, it explores identity and community perspectives."
+               },
+               {
+                 title: "Masaantaar",
+                 type: "Play (Writer & Director)",
+                 description:
+                   "A political satire that examines superstition and social dynamics in rural Nepal."
+               },
+               {
+                 title: "Kalapattharmathi",
+                 type: "Play (Director)",
+                 description: "A Mandala Theatre production directed by Pradip Kumar Chaudhary."
+               }
+             ].map((item, idx) => (
+               <div key={idx} className="group cursor-pointer">
+                 <div className="aspect-[4/5] bg-slate-200 rounded-lg mb-4 overflow-hidden">
+                   <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
+                 </div>
+                 <h3 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-xl tracking-[0] leading-7 mb-2">
+                   {item.title}
+                 </h3>
+                 <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-base tracking-[0] leading-6">
+                   {item.type}
+                 </p>
+                 <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-sm tracking-[0] leading-5 mt-2">
+                   {item.description}
+                 </p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full py-24 bg-slate-50">
+        <div className="container mx-auto px-40">
+          <div className="grid grid-cols-2 gap-16 items-center">
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img
+                src="/images/pkdai2.jpg"
+                alt="Pradip Kumar Chaudhary on bridge"
+                className="w-full h-full object-cover block rounded-lg"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => ((e.currentTarget as HTMLImageElement).src = '/images/pkdai2.jpg')}
+              />
+            </div>
+            <div>
+              <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-6">
+                About Me
+              </h2>
+              <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-6">
+                With over 15 years of experience in the performing arts, I have dedicated my career to bringing compelling stories and characters to audiences around the world.
+              </p>
+              <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-8">
+                From classical theater to contemporary cinema, my versatility and commitment to craft have earned recognition from both critics and peers.
+              </p>
+              <Button className="bg-[#18386e] hover:bg-[#18386e]/90 text-white px-8 py-6 text-base h-auto">
+                Read Full Biography
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
