@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const socialIcons = [
   { src: "/container-3.svg", alt: "Facebook", url: "https://www.facebook.com/pradip.k.chaudhary.1" },
-  { src: "/container.svg", alt: "Social icon 2", url: "#" },
+  { src: "/container.svg", alt: "Instagram", url: "https://www.instagram.com/pradipkumar__chaudhary/" },
   // YouTube (set to the provided channel)
   { src: "/container-2.svg", alt: "YouTube", url: "https://www.youtube.com/@devdatcreations4526" },
 ];
