@@ -155,8 +155,8 @@ export const Home = (): JSX.Element => {
               <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-8">
                 From classical theater to contemporary cinema, my versatility and commitment to craft have earned recognition from both critics and peers.
               </p>
-              <Button className="bg-[#18386e] hover:bg-[#18386e]/90 text-white px-8 py-6 text-base h-auto">
-                Read Full Biography
+              <Button asChild className="bg-[#18386e] hover:bg-[#18386e]/90 text-white px-8 py-6 text-base h-auto">
+                <Link to="/biography">Read Full Biography</Link>
               </Button>
             </div>
           </div>
