@@ -74,12 +74,14 @@ export const Home = (): JSX.Element => {
                 title: "Masaantaar",
                 type: "Play (Writer & Director)",
                 description:
-                  "A political satire that examines superstition and social dynamics in rural Nepal."
+                  "Story of a young boy and his sister who tries to go against superstitions but is threatened by the society and people who have strong belief on ghosts and traditional healers."
               },
               {
-                title: "Kalapattharmathi",
+                title: "Kaalaa Patthar Maathi",
                 type: "Play (Director)",
-                description: "A Mandala Theatre production directed by Pradip Kumar Chaudhary."
+                description: "Sufferings of a mother residing in mountains who wants to keep her family alive and together.",
+                // Poster from Mandala Theatre page — place at public/images/kaalaa-patthar-maathi.jpg
+                image: "/images/kaalaa-patthar-maathi.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">

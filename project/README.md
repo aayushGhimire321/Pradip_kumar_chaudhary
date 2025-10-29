@@ -92,6 +92,14 @@ Copy-Item -Path $env:USERPROFILE\Downloads\jhimke-mama-poster.jpg -Destination '
 
 The Home page expects the file at `/images/jhimke-mama-poster.jpg`. If the image is missing, the site will automatically show a gradient placeholder instead.
 
+To add the Kaalaa Patthar Maathi poster from the Mandala Theatre production page, copy it into `public/images/` with this command (example):
+
+```powershell
+Copy-Item -Path $env:USERPROFILE\Downloads\kaalaa-patthar-maathi.jpg -Destination 'd:\project-bolt-sb1-uccdtguz\project\public\images\kaalaa-patthar-maathi.jpg'
+```
+
+The Home page renders `/images/kaalaa-patthar-maathi.jpg` for the "Kaalaa Patthar Maathi" card. If the poster file isn't present the card will show the gradient fallback.
+
 ## Accessibility and behavior notes
 
 - Buttons in the Home screen use the `Button` component with `asChild` so they can wrap `react-router`'s `<Link>` for client-side navigation.
