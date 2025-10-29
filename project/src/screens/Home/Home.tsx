@@ -68,7 +68,7 @@ export const Home = (): JSX.Element => {
                 description:
                   "An original play (2020) written and directed by Pradip Kumar Chaudhary, based on a real story by Durga Prasad Pandey. Set in the village of Deurali, it explores identity and community perspectives.",
                 // Put the poster image (place the file at public/images/jhimke-mama-poster.jpg)
-                image: "/images/jhimke-mama-poster.jpg"
+                image: "/images/jhimkey_mama.jpg"
               },
               {
                 title: "Masaantaar",
@@ -81,7 +81,7 @@ export const Home = (): JSX.Element => {
                 type: "Play (Director)",
                 description: "Sufferings of a mother residing in mountains who wants to keep her family alive and together.",
                 // Poster from Mandala Theatre page — place at public/images/kaalaa-patthar-maathi.jpg
-                image: "/images/kaalaa-patthar-maathi.jpg"
+                image: "/images/kaalaa_pathar_mathi.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
@@ -90,7 +90,7 @@ export const Home = (): JSX.Element => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover block"
+                      className="w-full h-full object-contain block bg-black"
                       loading="lazy"
                       decoding="async"
                       onError={(e) => {
