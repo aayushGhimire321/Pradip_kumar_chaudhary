@@ -23,9 +23,23 @@ export const Home = (): JSX.Element => {
             Actor • Playwright • Director
           </p>
 
-          <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#36454f] text-base md:text-lg tracking-[0] leading-7 mb-8 max-w-xl">
-            Bringing characters to life with passion and authenticity. Associated with Mandala Theatre Nepal, Pradip's work explores Nepali narratives and social themes rooted in local culture.
-          </p>
+          <div className="max-w-xl mb-8">
+            <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#36454f] text-base md:text-lg tracking-[0] leading-7 mb-4">
+              Born on 30 May 1987 in Triyuga Municipality (Ward 3, Motigada, Gaighat — Udayapur), Pradip Kumar Chaudhary is an actor, playwright, screenwriter and director whose work bridges stage and screen.
+            </p>
+
+            <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#36454f] text-base md:text-lg tracking-[0] leading-7 mb-4">
+              He joined Mandala Theatre Nepal in Kathmandu in 2010 and has since become a familiar presence in Nepali theatre — known for his committed performances and thoughtful direction.
+            </p>
+
+            <ul className="list-disc list-inside text-sm text-[#49545a] space-y-1">
+              <li><strong>Parents:</strong> Jibendra Chaudhary &amp; Liladevi Chaudhary</li>
+              <li><strong>Film debut:</strong> Maun (2013)</li>
+              <li><strong>Breakout role:</strong> 'Pk Don' in Hostel Return (2015)</li>
+              <li><strong>Recent work:</strong> Portrayed Maila in Barista Maila (2025)</li>
+              <li><strong>Affiliation:</strong> Mandala Theatre Nepal (since 2010)</li>
+            </ul>
+          </div>
 
           <div className="flex flex-wrap gap-4">
             <Button asChild className="bg-[#18386e] text-white px-6 py-3 text-base h-auto rounded-md shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl">
@@ -74,7 +88,8 @@ export const Home = (): JSX.Element => {
                 title: "Masaantaar",
                 type: "Play (Writer & Director)",
                 description:
-                  "Story of a young boy and his sister who tries to go against superstitions but is threatened by the society and people who have strong belief on ghosts and traditional healers."
+                  "Story of a young boy and his sister who tries to go against superstitions but is threatened by the society and people who have strong belief on ghosts and traditional healers.",
+                image: "/images/masantaar.jpg"
               },
               {
                 title: "Kaalaa Patthar Maathi",
