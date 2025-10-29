@@ -2,10 +2,11 @@ import { Separator } from "../ui/separator";
 import { Link } from "react-router-dom";
 
 const socialIcons = [
-  { src: "/container-3.svg", alt: "Social icon 1" },
-  { src: "/container.svg", alt: "Social icon 2" },
-  { src: "/container-1.svg", alt: "Social icon 3" },
-  { src: "/container-2.svg", alt: "Social icon 4" },
+  { src: "/container-3.svg", alt: "Social icon 1", url: "#" },
+  { src: "/container.svg", alt: "Social icon 2", url: "#" },
+  { src: "/container-1.svg", alt: "Social icon 3", url: "#" },
+  // YouTube (set to the provided channel)
+  { src: "/container-2.svg", alt: "YouTube", url: "https://www.youtube.com/@devdatcreations4526" },
 ];
 
 const sectionLinks = [
@@ -36,11 +37,18 @@ export const Footer = (): JSX.Element => {
 
             <div className="flex items-center gap-3 mt-3">
               {socialIcons.map((icon, index) => (
-                  <a key={index} href="#" aria-label={icon.alt} className="w-9 h-9 rounded-md bg-white/6 flex items-center justify-center hover:bg-white/12 transition shadow-sm">
-                    {/* SVG icons are dark; apply filter to make them visible on dark background */}
-                    <img className="w-5 h-5 filter invert brightness-150" alt={icon.alt} src={icon.src} />
-                  </a>
-                ))}
+                <a
+                  key={index}
+                  href={icon.url ?? '#'}
+                  aria-label={icon.alt}
+                  className="w-9 h-9 rounded-md bg-white/6 flex items-center justify-center hover:bg-white/12 transition shadow-sm"
+                  target={icon.url && icon.url !== '#' ? '_blank' : undefined}
+                  rel={icon.url && icon.url !== '#' ? 'noopener noreferrer' : undefined}
+                >
+                  {/* SVG icons are dark; apply filter to make them visible on dark background */}
+                  <img className="w-5 h-5 filter invert brightness-150" alt={icon.alt} src={icon.src} />
+                </a>
+              ))}
             </div>
           </div>
 
