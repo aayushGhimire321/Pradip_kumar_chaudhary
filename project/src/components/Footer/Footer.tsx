@@ -2,7 +2,7 @@ import { Separator } from "../ui/separator";
 import { Link } from "react-router-dom";
 
 const socialIcons = [
-  { src: "/container-3.svg", alt: "Social icon 1", url: "#" },
+  { src: "/container-3.svg", alt: "Facebook", url: "https://www.facebook.com/pradip.k.chaudhary.1" },
   { src: "/container.svg", alt: "Social icon 2", url: "#" },
   { src: "/container-1.svg", alt: "Social icon 3", url: "#" },
   // YouTube (set to the provided channel)
