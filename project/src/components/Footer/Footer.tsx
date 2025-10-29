@@ -18,13 +18,13 @@ const sectionLinks = [
 
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="w-full bg-[#071024] text-white pt-16 pb-8">
+  <footer className="w-full bg-black text-white pt-16 pb-8">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-10">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#18386e] rounded-md flex items-center justify-center shadow-md">
-                <img className="w-5 h-5" alt="Gem" src="/gem.svg" />
+              <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center shadow-md">
+                <img className="w-5 h-5 filter brightness-0" alt="Gem" src="/gem.svg" />
               </div>
               <h3 className="[font-family:'Playfair_Display',Helvetica] font-bold text-white text-xl">
                 Pradip Kumar Chaudhary
@@ -69,7 +69,8 @@ export const Footer = (): JSX.Element => {
             <p className="text-sm text-slate-300 mb-3">Subscribe for occasional news about productions and events.</p>
             <form className="flex gap-2">
               <input aria-label="Email" type="email" placeholder="Your email" className="flex-1 px-3 py-2 rounded-md text-black" />
-              <button type="submit" className="bg-[#18386e] text-white px-4 py-2 rounded-md shadow">Subscribe</button>
+              {/* White subscribe button with dark text for contrast */}
+              <button type="submit" className="bg-white text-[#071024] px-4 py-2 rounded-md shadow">Subscribe</button>
             </form>
           </div>
         </div>

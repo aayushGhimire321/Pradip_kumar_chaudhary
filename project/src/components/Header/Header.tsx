@@ -15,10 +15,9 @@ const navigationItems = [
 ];
 
 const socialMediaIcons = [
-  { alt: "Facebook", src: "/facebook.svg" },
-  { alt: "Instagram", src: "/instagram.svg" },
-  { alt: "Linked in", src: "/linkedin-1.svg" },
-  { alt: "You tube", src: "/youtube-1.svg" },
+  { alt: "Facebook", src: "/facebook.svg", url: "https://www.facebook.com/pradip.k.chaudhary.1" },
+  { alt: "Instagram", src: "/instagram.svg", url: "https://www.instagram.com/pradipkumar__chaudhary/" },
+  { alt: "YouTube", src: "/youtube-1.svg", url: "https://www.youtube.com/@devdatcreations4526" },
 ];
 
 export const Header = ({ activePage }: HeaderProps): JSX.Element => {
@@ -59,14 +58,22 @@ export const Header = ({ activePage }: HeaderProps): JSX.Element => {
 
           <div className="flex items-center gap-3">
             {socialMediaIcons.map((icon, index) => (
-              <Button
+              <a
                 key={index}
-                variant="ghost"
-                size="icon"
-                className="w-10 h-10 rounded-md p-0 hover:bg-[#f6f9ff]"
+                href={icon.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={icon.alt}
+                className="inline-block"
               >
-                <img className="w-4 h-4" alt={icon.alt} src={icon.src} />
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="w-10 h-10 rounded-md p-0 hover:bg-[#f6f9ff]"
+                >
+                  <img className="w-4 h-4" alt={icon.alt} src={icon.src} />
+                </Button>
+              </a>
             ))}
           </div>
         </div>
@@ -95,7 +102,15 @@ export const Header = ({ activePage }: HeaderProps): JSX.Element => {
             ))}
             <div className="flex gap-3 mt-2">
               {socialMediaIcons.map((icon, idx) => (
-                <img key={idx} src={icon.src} alt={icon.alt} className="w-6 h-6" />
+                <a
+                  key={idx}
+                  href={icon.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={icon.alt}
+                >
+                  <img src={icon.src} alt={icon.alt} className="w-6 h-6" />
+                </a>
               ))}
             </div>
           </div>
