@@ -61,40 +61,56 @@ export const Home = (): JSX.Element => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-             {[
-               {
-                 title: "Jhimke Mama",
-                 type: "Play (Director & Writer)",
-                 description:
-                   "An original play (2020) written and directed by Pradip Kumar Chaudhary, based on a real story by Durga Prasad Pandey. Set in the village of Deurali, it explores identity and community perspectives."
-               },
-               {
-                 title: "Masaantaar",
-                 type: "Play (Writer & Director)",
-                 description:
-                   "A political satire that examines superstition and social dynamics in rural Nepal."
-               },
-               {
-                 title: "Kalapattharmathi",
-                 type: "Play (Director)",
-                 description: "A Mandala Theatre production directed by Pradip Kumar Chaudhary."
-               }
-             ].map((item, idx) => (
-               <div key={idx} className="group cursor-pointer">
-                 <div className="aspect-[4/5] bg-slate-200 rounded-lg mb-4 overflow-hidden">
-                   <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
-                 </div>
-                 <h3 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-xl tracking-[0] leading-7 mb-2">
-                   {item.title}
-                 </h3>
-                 <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-base tracking-[0] leading-6">
-                   {item.type}
-                 </p>
-                 <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-sm tracking-[0] leading-5 mt-2">
-                   {item.description}
-                 </p>
-               </div>
-             ))}
+            {[
+              {
+                title: "Jhimke Mama",
+                type: "Play (Director & Writer)",
+                description:
+                  "An original play (2020) written and directed by Pradip Kumar Chaudhary, based on a real story by Durga Prasad Pandey. Set in the village of Deurali, it explores identity and community perspectives.",
+                // Put the poster image (place the file at public/images/jhimke-mama-poster.jpg)
+                image: "/images/jhimke-mama-poster.jpg"
+              },
+              {
+                title: "Masaantaar",
+                type: "Play (Writer & Director)",
+                description:
+                  "A political satire that examines superstition and social dynamics in rural Nepal."
+              },
+              {
+                title: "Kalapattharmathi",
+                type: "Play (Director)",
+                description: "A Mandala Theatre production directed by Pradip Kumar Chaudhary."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="group cursor-pointer">
+                <div className="aspect-[4/5] bg-slate-200 rounded-lg mb-4 overflow-hidden relative">
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover block"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        // hide the broken image so the gradient fallback is visible
+                        (e.currentTarget as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
+                  )}
+                </div>
+                <h3 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-xl tracking-[0] leading-7 mb-2">
+                  {item.title}
+                </h3>
+                <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-base tracking-[0] leading-6">
+                  {item.type}
+                </p>
+                <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-sm tracking-[0] leading-5 mt-2">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
