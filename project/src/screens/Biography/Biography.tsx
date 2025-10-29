@@ -46,8 +46,18 @@ export const Biography = (): JSX.Element => {
       <section className="relative w-full py-24 bg-white">
         <div className="container mx-auto px-6 md:px-40">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
-            <div className="aspect-[3/4] bg-slate-200 rounded-lg sticky top-8">
-              <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 rounded-lg" />
+            <div className="aspect-[3/4] rounded-lg sticky top-8 overflow-hidden">
+              <img
+                src="/images/pkdai2.jpg"
+                alt="Pradip Kumar Chaudhary"
+                className="w-full h-full object-cover block rounded-lg"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  // fallback to existing pkdai.png if pkdai2.jpg is missing
+                  (e.currentTarget as HTMLImageElement).src = '/images/pkdai.png';
+                }}
+              />
             </div>
             <div>
               <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-5xl tracking-[0] leading-[60px] mb-8">
