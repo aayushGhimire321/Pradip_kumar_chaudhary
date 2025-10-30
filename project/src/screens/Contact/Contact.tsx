@@ -59,7 +59,7 @@ export const Contact = (): JSX.Element => {
                   <img className="w-6 h-6" alt="Phone" src="/phone.svg" />
                   <div>
                     <div className="text-sm [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1f]">Phone</div>
-                    <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]">+1 (234) 567-8900</div>
+                    <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]">+977 986-0765125</div>
                   </div>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export const Contact = (): JSX.Element => {
                 <img className="w-6 h-6" alt="Home" src="/home-2-1.svg" />
                 <div>
                   <div className="text-sm [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1f]">Address</div>
-                  <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]">Address</div>
+                  <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]"> Gaighat, Nepal</div>
                 </div>
               </div>
             </aside>
