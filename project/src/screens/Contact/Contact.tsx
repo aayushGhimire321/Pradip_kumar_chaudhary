@@ -9,16 +9,19 @@ const socialMediaButtons = [
     icon: "/facebook-1.svg",
     alt: "Facebook",
     left: "left-40",
+    url: "https://www.facebook.com/pradip.k.chaudhary.1",
   },
   {
     icon: "/instagram.svg",
     alt: "Instagram",
     left: "left-[216px]",
+    url: "https://www.instagram.com/pradipkumar__chaudhary/",
   },
   {
     icon: "/youtube.svg",
     alt: "You tube",
     left: "left-[328px]",
+    url: "https://www.youtube.com/@devdatcreations4526",
   },
 ];
 
@@ -65,14 +68,32 @@ export const Contact = (): JSX.Element => {
 
               <div className="flex items-center gap-3 mb-6">
                 {socialMediaButtons.map((social, idx) => (
-                  <Button
-                    key={idx}
-                    variant="outline"
-                    size="icon"
-                    className="w-10 h-10 bg-white border border-solid border-[#dee1e6] rounded-md"
-                  >
-                    <img className="w-5 h-5" alt={social.alt} src={social.icon} />
-                  </Button>
+                  social.url ? (
+                    <a
+                      key={idx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.alt}
+                    >
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="w-10 h-10 bg-white border border-solid border-[#dee1e6] rounded-md"
+                      >
+                        <img className="w-5 h-5" alt={social.alt} src={social.icon} />
+                      </Button>
+                    </a>
+                  ) : (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      size="icon"
+                      className="w-10 h-10 bg-white border border-solid border-[#dee1e6] rounded-md"
+                    >
+                      <img className="w-5 h-5" alt={social.alt} src={social.icon} />
+                    </Button>
+                  )
                 ))}
               </div>
 

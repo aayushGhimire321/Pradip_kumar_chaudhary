@@ -22,57 +22,83 @@ const portfolioItems = [
     description: "Breakout film role in the popular Nepali movie 'Hostel Returns' (2015).",
     image: "/images/hostel_return2.jpg",
   },
-
   {
     title: "Jhimke Mama",
     category: "Director",
     year: "2020",
     role: "Writer & Director",
-    description: "Original play based on a real story told by advocate Durga Prasad Pandey, set in imaginary village Deurali"
+    description: "Original play based on a real story told by advocate Durga Prasad Pandey, set in imaginary village Deurali",
+    image: "/images/jhimkey_mama.jpg",
   },
   {
     title: "Masaantaar",
     category: "Director",
     year: "2017",
     role: "Writer & Director",
-    description: "Political satire using shamanism to explore superstitions in rural Nepal and critique national politics"
+    description: "Story of a young boy and his sister who tries to go against superstitions but is threatened by the society and people who have strong belief on ghosts and traditional healers.",
+    image: "/images/masantaar.jpg",
   },
   {
     title: "Kalapattharmathi",
     category: "Director",
     year: "2017",
     role: "Director",
-    description: "Theatrical production at Mandala Theatre Nepal"
+    description: "Theatrical production at Mandala Theatre Nepal",
+    image: "/images/kaalaa_pathar_mathi.jpg",
+  },
+  {
+    title: "Aakash Ko Bato",
+    category: "Director",
+    year: "—",
+    role: "Director",
+    description:
+      "Stage production presented by Mandala Theatre (Aakash Ko Bato / The Sky Route). Visit Mandala Theatre for production details and credits.",
+    image: "/images/aakashkobato.webp",
   },
   {
     title: "Sunkeshari",
     category: "Actor",
     year: "2023",
     role: "Actor",
-    description: "A play based on a Karnali folk story; premiered at Rongo Harshe Bingo Barshe (Dhaka, 2012) and opened Kathmandu International Theatre Festival 2012; later staged at major festivals including Bharat Rang Mahotsav."
+    description: "A play based on a Karnali folk story; premiered at Rongo Harshe Bingo Barshe (Dhaka, 2012) and opened Kathmandu International Theatre Festival 2012; later staged at major festivals including Bharat Rang Mahotsav.",
+    image: "/images/Final_sunkeshari-poster-KTM.jpg",
   },
   {
     title: "Masaantaar",
     category: "Writer",
     year: "2017",
     role: "Playwright",
-    description: "60-minute play exploring contradictions between conservative and modern mindsets in rural villages"
+    description: "60-minute play exploring contradictions between conservative and modern mindsets in rural villages",
+    image: "/images/masantaar.jpg",
   },
   {
     title: "Jhimke Mama",
     category: "Writer",
     year: "2020",
     role: "Playwright",
-    description: "Script based on real story exploring themes of identity and social perception in village communities"
-  }
+    description: "Original play based on a real story told by advocate Durga Prasad Pandey, set in imaginary village Deurali",
+    image: "/images/jhimkey_mama.jpg",
+  },
 ];
 
 export const Portfolio = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredItems = activeCategory === "All"
-    ? portfolioItems
-    : portfolioItems.filter(item => item.category === activeCategory);
+  const filteredItems = (() => {
+    if (activeCategory !== "All") {
+      return portfolioItems.filter((item) => item.category === activeCategory);
+    }
+
+    // When viewing "All", dedupe items by title so the same production
+    // (which may have multiple entries for different roles) only appears once.
+    const seen = new Set<string>();
+    return portfolioItems.filter((item) => {
+      const key = (item.title || "").toString().toLowerCase().trim();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  })();
 
   return (
     <div className="bg-white w-full min-w-[1440px] relative">
@@ -93,9 +119,10 @@ export const Portfolio = (): JSX.Element => {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 variant={activeCategory === category ? "default" : "outline"}
-                className={activeCategory === category
-                  ? "bg-[#18386e] hover:bg-[#18386e]/90 text-white px-8"
-                  : "border-[#dee1e6] text-[#171a1f] hover:bg-slate-50 px-8"
+                className={
+                  activeCategory === category
+                    ? "bg-[#18386e] hover:bg-[#18386e]/90 text-white px-8"
+                    : "border-[#dee1e6] text-[#171a1f] hover:bg-slate-50 px-8"
                 }
               >
                 {category}

@@ -8,7 +8,7 @@ const videos = [
     title: "Aakashko Bato — Production Page",
     type: "Theatre Production",
     year: "2024",
-    source: "https://mandalatheatre.com/productions/aakashko-bato-the-sky-route/"
+    source: "https://mandalatheatre.com/productions/aakashko-bato-the-sky-route/",
   },
   {
     title: "Jhimke Mama — Production Page",
@@ -38,29 +38,12 @@ const photos = [
     source: "https://mandalatheatre.com/events/milarepa/"
   },
   {
-    title: "Actors Needed — News Image",
-    category: "News",
-    src: "https://mandalatheatre.com/wp-content/uploads/2025/10/Actors-Needed-Web-768x534.avif",
-    source: "https://mandalatheatre.com/news-and-events/actors-needed/"
-  },
-  {
-    title: "Production Still (DSC0646)",
-    category: "Theatre",
-    src: "https://mandalatheatre.com/wp-content/uploads/elementor/thumbs/DSC0646-rotated-qwil1iewo38dj5nryz55ffvvg9njyjklx40n8hxwsg.jpg",
-    source: "https://mandalatheatre.com/"
-  },
-  {
     title: "Aakashko Bato Poster (page)",
     category: "Poster",
-    src: "https://mandalatheatre.com/wp-content/uploads/2024/11/AAKASH-KO-BATO-POSTER.jpg",
+    src: "/images/aakashkobato.webp",
     source: "https://mandalatheatre.com/productions/aakashko-bato-the-sky-route/"
   },
-  {
-    title: "Theatre Lab Poster",
-    category: "Promo",
-    src: "https://mandalatheatre.com/wp-content/uploads/2024/03/we-are-hiring-1-300x169.png.webp",
-    source: "https://mandalatheatre.com/theatre-lab/"
-  }
+  
 ];
 
 export const Media = (): JSX.Element => {
