@@ -19,15 +19,10 @@ const portfolioItems = [
     category: "Actor",
     year: "2015",
     role: "Actor (Breakout role: 'Pk Don')",
-    description: "Breakout film role in the popular Nepali movie 'Hostel Returns' (2015)."
+    description: "Breakout film role in the popular Nepali movie 'Hostel Returns' (2015).",
+    image: "/images/hostel_return2.jpg",
   },
-  {
-    title: "Recent Production",
-    category: "Director",
-    year: "2024",
-    role: "Director",
-    description: "Latest theatrical production at Mandala Theatre Nepal"
-  },
+
   {
     title: "Jhimke Mama",
     category: "Director",
