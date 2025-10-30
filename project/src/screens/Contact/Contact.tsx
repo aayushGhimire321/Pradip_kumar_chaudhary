@@ -88,8 +88,10 @@ export const Contact = (): JSX.Element => {
               <div className="flex items-center gap-3">
                 <img className="w-6 h-6" alt="Home" src="/home-2-1.svg" />
                 <div>
-                  <div className="text-sm [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1f]">Address</div>
-                  <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]"> Gaighat, Nepal</div>
+                  <div className="text-sm [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1f]">Permanent address</div>
+                  <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]">Gaighat, Nepal</div>
+                  <div className="text-sm [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1f] mt-2">Current residence</div>
+                  <div className="text-lg [font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc]">Kathmandu, Nepal</div>
                 </div>
               </div>
             </aside>
