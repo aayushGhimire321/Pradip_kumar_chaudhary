@@ -11,7 +11,15 @@ const portfolioItems = [
     category: "Actor",
     year: "2025",
     role: "Actor",
-    description: "Recently released film in which he played the role of Maila."
+    description: "Recently released film in which he played the role of Maila.",
+    image: "/images/barista-balaram_2.jpg",
+  },
+  {
+    title: "Hostel Returns",
+    category: "Actor",
+    year: "2015",
+    role: "Actor (Breakout role: 'Pk Don')",
+    description: "Breakout film role in the popular Nepali movie 'Hostel Returns' (2015)."
   },
   {
     title: "Recent Production",
@@ -46,7 +54,7 @@ const portfolioItems = [
     category: "Actor",
     year: "2023",
     role: "Actor",
-    description: "Performed at International Theatre Festival of India, ensemble cast production"
+    description: "A play based on a Karnali folk story; premiered at Rongo Harshe Bingo Barshe (Dhaka, 2012) and opened Kathmandu International Theatre Festival 2012; later staged at major festivals including Bharat Rang Mahotsav."
   },
   {
     title: "Masaantaar",
@@ -107,7 +115,15 @@ export const Portfolio = (): JSX.Element => {
                 className="group cursor-pointer border border-solid border-[#dee1e6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="aspect-[4/5] bg-slate-200 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 group-hover:scale-105 transition-transform duration-300" />
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
