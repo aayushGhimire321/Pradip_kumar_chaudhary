@@ -40,7 +40,7 @@ export const ContactInfoSection = (): JSX.Element => {
           Send a Booking Inquiry
         </h2>
 
-        <form className="flex flex-col gap-[18px]">
+        <form action="https://formspree.io/f/xvgvqljy" method="POST" className="flex flex-col gap-[18px]">
           {formFields.map((field) => (
             <div key={field.id} className="flex flex-col gap-[9px]">
               <Label
@@ -52,6 +52,7 @@ export const ContactInfoSection = (): JSX.Element => {
               {field.type === "input" ? (
                 <Input
                   id={field.id}
+                  name={field.id}
                   placeholder={field.placeholder}
                   className="bg-white rounded-md border border-solid border-[#dee1e6] [font-family:'Open_Sans',Helvetica] font-normal text-[#565d6d] text-sm tracking-[0] leading-[22px] h-[39px] px-3"
                 />
@@ -59,6 +60,7 @@ export const ContactInfoSection = (): JSX.Element => {
                 <div className="relative">
                   <Textarea
                     id={field.id}
+                    name={field.id}
                     placeholder={field.placeholder}
                     className="bg-white rounded-md border border-solid border-[#dee1e6] [font-family:'Open_Sans',Helvetica] font-normal text-[#565d6d] text-sm tracking-[0] leading-[22px] h-[131px] px-3 pt-2 resize-none"
                   />

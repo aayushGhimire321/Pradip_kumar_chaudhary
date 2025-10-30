@@ -16,11 +16,6 @@ const socialMediaButtons = [
     left: "left-[216px]",
   },
   {
-    icon: "/linkedin.svg",
-    alt: "Linked in",
-    left: "left-[272px]",
-  },
-  {
     icon: "/youtube.svg",
     alt: "You tube",
     left: "left-[328px]",
