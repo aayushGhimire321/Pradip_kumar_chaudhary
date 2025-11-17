@@ -6,7 +6,8 @@
   "description": "Pradip Kumar Chaudhary",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+  "build": "vite build && node scripts/generate-sitemap.js http://pradip-chaudhary.com.np",
+  "generate:sitemap": "node scripts/generate-sitemap.js http://pradip-chaudhary.com.np"
   },
   "dependencies": {
     "clsx": "2.1.1",

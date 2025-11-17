@@ -1,6 +1,7 @@
 // React import not required with the new JSX transform
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { SEO } from "../../components/SEO/SEO";
 
 // Media sourced from Mandala Theatre (posters and production images)
 const videos = [
@@ -49,6 +50,7 @@ const photos = [
 export const Media = (): JSX.Element => {
   return (
     <div className="bg-white w-full relative">
+      <SEO title="Media" description="Media gallery — posters, photos and video links for Pradip Kumar Chaudhary's theatrical work." path="/media" />
       <Header activePage="Media" />
 
       <section className="relative w-full py-24 bg-white">

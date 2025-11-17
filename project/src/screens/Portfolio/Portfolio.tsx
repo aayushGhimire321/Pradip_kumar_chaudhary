@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { SEO } from "../../components/SEO/SEO";
 import { Button } from "../../components/ui/button";
 
 const categories = ["All", "Director", "Actor", "Writer"];
@@ -110,6 +111,7 @@ export const Portfolio = (): JSX.Element => {
 
   return (
     <div className="bg-white w-full min-w-[1440px] relative">
+      <SEO title="Portfolio" description="Selected theatrical and film work by Pradip Kumar Chaudhary — directing, writing and acting credits." path="/portfolio" />
       <Header activePage="Portfolio" />
 
       <section className="relative w-full py-24 bg-white">

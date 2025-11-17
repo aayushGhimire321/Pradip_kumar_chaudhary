@@ -15,6 +15,13 @@ The site showcases biography, portfolio items (plays, directing credits and film
 
 This project is set up for local development using `npm run dev` and production build with `npm run build`.
 
+## SEO setup (what I added)
+
+- Per-page meta component: `src/components/SEO/SEO.tsx` — use this at the top of each page component to set title/description/og image/canonical.
+- Site config: edit `src/lib/seo.ts` and set `siteUrl` to your production domain (important for canonical and sitemap).
+- Sitemap: `scripts/generate-sitemap.js` writes `public/sitemap.xml`. It's called automatically by the `build` script. Replace the site URL parameter in `package.json` scripts if needed.
+- Robots: `public/robots.txt` already references `/sitemap.xml`.
+
 ## Short bio (from site)
 
 Pradip Kumar Chaudhary — Actor • Playwright • Director

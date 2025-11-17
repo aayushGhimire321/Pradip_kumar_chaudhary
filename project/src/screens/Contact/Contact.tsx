@@ -3,6 +3,7 @@ import { Button } from "../../components/ui/button";
 import { ContactInfoSection } from "./sections/ContactInfoSection";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { SEO } from "../../components/SEO/SEO";
 
 const socialMediaButtons = [
   {
@@ -28,6 +29,7 @@ const socialMediaButtons = [
 export const Contact = (): JSX.Element => {
   return (
     <div className="bg-white w-full relative">
+      <SEO title="Contact" description="Contact and booking information for Pradip Kumar Chaudhary — email, phone, and social profiles." path="/contact" />
       <Header activePage="Contact" />
 
       <section className="w-full py-24 bg-white">

@@ -1,6 +1,7 @@
 // React import not required with the new JSX transform
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { SEO } from "../../components/SEO/SEO";
 
 const achievements = [
   {
@@ -41,6 +42,7 @@ const training = [
 export const Biography = (): JSX.Element => {
   return (
     <div className="bg-white w-full relative">
+      <SEO title="Biography" description="Biography and achievements of Pradip Kumar Chaudhary — theatre director, playwright and actor." path="/biography" />
       <Header activePage="Biography" />
 
       <section className="relative w-full py-24 bg-white">

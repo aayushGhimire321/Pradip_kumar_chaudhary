@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import HeroImage from "../../components/ui/HeroImage";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { SEO } from "../../components/SEO/SEO";
 
 export const Home = (): JSX.Element => {
   return (
     <div className="bg-white w-full relative">
+      <SEO title="Home" description="Actor, playwright and director Pradip Kumar Chaudhary — portfolio, biography and contact for bookings." path="/" image="/images/pkdai2.jpg" />
       <Header activePage="Home" />
       <section className="relative w-full h-auto md:h-[640px] bg-gradient-to-br from-slate-50 to-white">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
