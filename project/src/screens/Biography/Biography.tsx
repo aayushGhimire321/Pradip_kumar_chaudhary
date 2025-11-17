@@ -20,7 +20,7 @@ const achievements = [
   },
   {
     year: "2017",
-    title: "Director - Kalapattharmathi",
+    title: "Director - Kala patthar mathi",
     description: "Production at Mandala Theatre Nepal"
   }
 ];
@@ -70,7 +70,7 @@ export const Biography = (): JSX.Element => {
                 Serving on both the Executive Board and Company Board of Mandala Theatre Nepal, Pradip has been instrumental in shaping the organization's artistic direction. His work focuses on exploring traditional theatrical forms while addressing contemporary social issues through politically charged narratives and thought-provoking storytelling.
               </p>
               <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7 mb-6">
-                As a director and playwright, Pradip has created several acclaimed productions including "Masaantaar" (2017), a political satire that uses the age-old practice of shamanism to examine Nepal's political landscape and rural superstitions. His other notable works include "Kalapattharmathi" and "Jhimke Mama" (2020), an original play based on a real story that explores themes of identity and village life.
+                As a director and playwright, Pradip has created several acclaimed productions including "Masaantaar" (2017), a political satire that uses the age-old practice of shamanism to examine Nepal's political landscape and rural superstitions. His other notable works include "Kala patthar mathi" and "Jhimke Mama" (2020), an original play based on a real story that explores themes of identity and village life.
               </p>
               <p className="[font-family:'Open_Sans',Helvetica] font-normal text-[#171a1fcc] text-lg tracking-[0] leading-7">
                 Beyond directing, Pradip has also performed as an actor in various productions, including "Sunkeshari," demonstrating his versatility as a theatre artist. His approach combines deep cultural understanding with modern theatrical techniques, creating performances that resonate with both local and international audiences.

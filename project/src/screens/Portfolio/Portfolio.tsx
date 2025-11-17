@@ -23,6 +23,14 @@ const portfolioItems = [
     image: "/images/hostel_return2.jpg",
   },
   {
+    title: "Maun",
+    category: "Actor",
+    year: "2013",
+    role: "Actor",
+    description: "Maun (2013) - Appeared as Aman's friend in the film.",
+    image: "/images/maun_2013.jpg",
+  },
+  {
     title: "Jhimke Mama",
     category: "Director",
     year: "2020",
