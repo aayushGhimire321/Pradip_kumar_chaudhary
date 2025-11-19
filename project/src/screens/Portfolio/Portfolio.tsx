@@ -110,12 +110,12 @@ export const Portfolio = (): JSX.Element => {
   })();
 
   return (
-    <div className="bg-white w-full min-w-[1440px] relative">
+    <div className="bg-white w-full relative">
       <SEO title="Portfolio" description="Selected theatrical and film work by Pradip Kumar Chaudhary — directing, writing and acting credits." path="/portfolio" />
       <Header activePage="Portfolio" />
 
       <section className="relative w-full py-24 bg-white">
-        <div className="container mx-auto px-40">
+  <div className="container mx-auto px-6 md:px-40">
           <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-5xl tracking-[0] leading-[60px] mb-6 text-center">
             Portfolio
           </h1>
@@ -140,7 +140,7 @@ export const Portfolio = (): JSX.Element => {
             ))}
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item, index) => (
               <div
                 key={index}

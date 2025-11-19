@@ -53,7 +53,7 @@ export const Media = (): JSX.Element => {
       <SEO title="Media" description="Media gallery — posters, photos and video links for Pradip Kumar Chaudhary's theatrical work." path="/media" />
       <Header activePage="Media" />
 
-      <section className="relative w-full py-24 bg-white">
+      <section className="relative w-full py-12 md:py-24 bg-white">
         <div className="container mx-auto px-6 md:px-40">
           <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#18386e] text-5xl tracking-[0] leading-[60px] mb-6">
             Media Gallery
@@ -66,7 +66,7 @@ export const Media = (): JSX.Element => {
             <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-12">
               Video Content
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {videos.map((video, index) => (
                 <a
                   key={index}
@@ -117,7 +117,7 @@ export const Media = (): JSX.Element => {
             <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-12">
               Photo Gallery
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {photos.map((photo, index) => (
                 <a
                   key={index}

@@ -20,7 +20,7 @@ export default function HeroImage({
         <div className="relative transform transition-transform duration-300 hover:-translate-y-2">
           {/* polaroid white frame */}
           <div className="bg-white rounded-md shadow-2xl p-3 md:p-4 w-full">
-            <div className="bg-slate-100 rounded-sm overflow-hidden w-[300px] h-[380px] md:w-[420px] md:h-[520px]">
+              <div className="bg-slate-100 rounded-sm overflow-hidden w-[300px] h-[380px] md:w-[420px] md:h-[520px]">
               <img
                 src={src}
                 alt={alt}

@@ -17,6 +17,20 @@ export const Home = (): JSX.Element => {
           <div className="hidden md:block absolute -right-40 top-10 w-[520px] h-[520px] bg-gradient-to-tr from-[#e6f0ff] to-[#f8fafc] rounded-full opacity-60 transform rotate-12 filter blur-3xl" />
         </div>
 
+        {/* Mobile: inline hero image shown above the text flow */}
+        <div className="block md:hidden px-6 mb-6">
+          <div className="w-full rounded-lg overflow-hidden shadow-md">
+            <img
+              src="/images/pkdai2.jpg"
+              alt="Pradip Kumar Chaudhary"
+              className="w-full h-64 object-cover block"
+              loading="lazy"
+              decoding="async"
+              onError={(e) => ((e.currentTarget as HTMLImageElement).style.display = 'none')}
+            />
+          </div>
+        </div>
+
         <div className="relative md:absolute md:top-1/2 md:left-40 md:-translate-y-1/2 max-w-xl md:max-w-2xl px-6 md:px-0">
           <h1 className="[font-family:'Playfair_Display',Helvetica] font-bold text-[#0f2650] text-4xl md:text-6xl tracking-tight leading-tight mb-4">
             Pradip Kumar Chaudhary
@@ -54,7 +68,7 @@ export const Home = (): JSX.Element => {
         </div>
 
         {/* Right-side hero image - replace /images/hero-photo.svg with your actual photo */}
-        <div className="hidden md:block md:absolute md:top-1/2 md:right-40 md:-translate-y-1/2 w-[420px] h-[520px]">
+            <div className="hidden md:block md:absolute md:top-1/2 md:right-40 md:-translate-y-1/2 w-[300px] h-auto md:h-[520px]">
           <div className="relative">
             <HeroImage
               src="/images/pkdai2.jpg"
@@ -68,7 +82,7 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative w-full py-24 bg-white">
-        <div className="container mx-auto px-40">
+        <div className="container mx-auto px-6 md:px-40">
           <h2 className="[font-family:'Playfair_Display',Helvetica] font-semibold text-[#171a1f] text-4xl tracking-[0] leading-[48px] mb-6 text-center">
             Featured Work
           </h2>
@@ -135,8 +149,8 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative w-full py-24 bg-slate-50">
-        <div className="container mx-auto px-40">
-          <div className="grid grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-6 md:px-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div className="aspect-square rounded-lg overflow-hidden">
               <img
                 src="/images/pkdai2.jpg"
