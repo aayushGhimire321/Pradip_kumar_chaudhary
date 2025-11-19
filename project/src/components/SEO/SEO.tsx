@@ -5,9 +5,11 @@ type Props = {
   description?: string;
   path?: string; // path relative to site root, e.g. '/portfolio'
   image?: string; // absolute or site-relative
+  structuredData?: object | object[];
+  noindex?: boolean;
 };
 
-export const SEO = ({ title, description, path, image }: Props) => {
+export const SEO = ({ title, description, path, image, structuredData, noindex }: Props) => {
   const metaTitle = title ? `${title} — ${SITE.title}` : SITE.title;
   const metaDescription = description || SITE.description;
   const url = path ? SITE.siteUrl.replace(/\/$/, '') + path : SITE.siteUrl;
@@ -17,6 +19,7 @@ export const SEO = ({ title, description, path, image }: Props) => {
     <>
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={url} />
 
       {/* Open Graph */}
@@ -32,11 +35,20 @@ export const SEO = ({ title, description, path, image }: Props) => {
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImage} />
+  <meta name="twitter:site" content={SITE.twitter} />
+  <meta name="twitter:creator" content={SITE.twitter} />
 
       {/* Structured data: Person */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredDataPerson()),
       }} />
+
+      {/* Optional additional structured data (CreativeWork, etc) */}
+      {structuredData ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: Array.isArray(structuredData) ? JSON.stringify(structuredData) : JSON.stringify([structuredData]),
+        }} />
+      ) : null}
     </>
   );
 };

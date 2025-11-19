@@ -93,6 +93,20 @@ const portfolioItems = [
 export const Portfolio = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState("All");
 
+  // Build structured data for each production (CreativeWork)
+  const structuredData = portfolioItems.map((item) => ({
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: item.title,
+    description: item.description,
+    image: item.image ? `http://pradip-chaudhary.com.np${item.image}` : undefined,
+    datePublished: item.year && item.year !== '—' ? item.year : undefined,
+    author: {
+      "@type": "Person",
+      name: "Pradip Kumar Chaudhary",
+    },
+  }));
+
   const filteredItems = (() => {
     if (activeCategory !== "All") {
       return portfolioItems.filter((item) => item.category === activeCategory);
@@ -111,7 +125,7 @@ export const Portfolio = (): JSX.Element => {
 
   return (
     <div className="bg-white w-full relative">
-      <SEO title="Portfolio" description="Selected theatrical and film work by Pradip Kumar Chaudhary — directing, writing and acting credits." path="/portfolio" />
+      <SEO title="Portfolio" description="Selected theatrical and film work by Pradip Kumar Chaudhary — directing, writing and acting credits." path="/portfolio" structuredData={structuredData} />
       <Header activePage="Portfolio" />
 
       <section className="relative w-full py-24 bg-white">

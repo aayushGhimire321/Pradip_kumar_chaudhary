@@ -14,6 +14,10 @@ export const structuredDataPerson = (overrides = {}) => ({
   '@type': 'Person',
   name: SITE.title,
   url: SITE.siteUrl,
-  sameAs: [],
+  sameAs: [
+    'https://www.facebook.com/pradip.k.chaudhary.1',
+    'https://www.instagram.com/pradipkumar__chaudhary/',
+    'https://www.youtube.com/@devdatcreations4526',
+  ],
   ...overrides,
 });
