@@ -123,6 +123,11 @@ export const Header = ({ activePage }: HeaderProps): JSX.Element => {
               </svg>
             </button>
 
+            {/* Small gem/diamond icon to match the navbar */}
+            <div className="absolute left-3 top-3 w-10 h-10 bg-[#18386e] text-white rounded-md flex items-center justify-center shadow">
+              <img className="w-5 h-5" alt="Gem" src="/gem.svg" />
+            </div>
+
             <div className="px-6 pt-6 pb-2">
               <nav>
                 <ul className="flex flex-col gap-6">
