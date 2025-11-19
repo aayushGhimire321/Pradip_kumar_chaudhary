@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files (should not be committed)
+.env
+.env.local
+.env.*.local

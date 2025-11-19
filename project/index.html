@@ -5,8 +5,23 @@
     <title>Pradip kumar Chaudhary</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- SEO: basic meta description and canonical - siteUrl is set in src/lib/seo.ts -->
-  <meta name="description" content="Personal website of Pradip kumar Chaudhary — portfolio, projects and contact information." />
+  <meta name="description" content="Actor, playwright, and director Pradip Kumar Chaudhary — portfolio, biography, showreels, news, and contact for bookings, collaborations, and press enquiries." />
   <link rel="canonical" href="http://pradip-chaudhary.com.np/" />
+
+  <!-- Google tag (gtag.js) - placed in head as recommended by Google -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WSEFDC9HM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Default consent mode: deny storage until user accepts (useful for EEA)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+    gtag('js', new Date());
+    // Disable automatic page_view; the React Analytics loader will send manual page_view events on route changes
+    gtag('config', 'G-6WSEFDC9HM', { 'send_page_view': false });
+  </script>
 
     <!-- Font loading: preconnect + stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,12 +32,12 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Pradip kumar Chaudhary" />
-    <meta property="og:description" content="Personal website of Pradip kumar Chaudhary — portfolio, projects and contact information." />
+  <meta property="og:description" content="Actor, playwright, and director Pradip Kumar Chaudhary — portfolio, biography, showreels, news, and contact for bookings, collaborations, and press enquiries." />
   <meta property="og:url" content="http://pradip-chaudhary.com.np/" />
   <meta property="og:image" content="http://pradip-chaudhary.com.np/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Pradip kumar Chaudhary" />
-    <meta name="twitter:description" content="Personal website of Pradip kumar Chaudhary — portfolio, projects and contact information." />
+  <meta name="twitter:description" content="Actor, playwright, and director Pradip Kumar Chaudhary — portfolio, biography, showreels, news, and contact for bookings, collaborations, and press enquiries." />
   <meta name="twitter:image" content="http://pradip-chaudhary.com.np/og-image.png" />
 
     <link href="tailwind.css" rel="stylesheet" />

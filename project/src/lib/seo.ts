@@ -1,7 +1,7 @@
 export const SITE = {
   title: 'Pradip Kumar Chaudhary',
   description:
-    'Pradip Kumar Chaudhary — actor, playwright and director. Portfolio, biography and contact for bookings and collaborations.',
+    'Actor, playwright, and director Pradip Kumar Chaudhary — portfolio, biography, showreels, news, and contact for bookings, collaborations, and press enquiries.',
   siteUrl: 'http://pradip-chaudhary.com.np', // production URL provided by user
   defaultImage: '/og-image.png',
   author: 'Pradip Kumar Chaudhary',
