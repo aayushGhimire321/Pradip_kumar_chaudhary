@@ -1,11 +1,16 @@
 /* Simple sitemap generator for static SPA routes.
-   Usage: node scripts/generate-sitemap.js <siteUrl>
-   It will write ./public/sitemap.xml with the listed routes.
+  Usage: node scripts/generate-sitemap.js <siteUrl>
+  It will write ./public/sitemap.xml with the listed routes.
+  This file is ESM-compatible (uses import) because the project uses "type": "module".
 */
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const siteUrl = process.argv[2] || 'https://example.com';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const siteUrl = process.argv[2] || 'http://pradip-chaudhary.com.np/';
 const routes = ['/', '/portfolio', '/biography', '/media', '/contact'];
 
 // Image list for portfolio page (keeps sitemap in sync with portfolio posters)

@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://example.com/</loc>
-    <lastmod>2025-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+    <loc>http://pradip-chaudhary.com.np/</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  <url>
+    <loc>http://pradip-chaudhary.com.np/portfolio</loc>
+    <lastmod>2025-11-19</lastmod>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/barista-balaram_2.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/hostel_return2.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/maun_2013.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/jhimkey_mama.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/masantaar.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/kaalaa_pathar_mathi.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/aakashkobato.webp</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://pradip-chaudhary.com.np/images/Final_sunkeshari-poster-KTM.jpg</image:loc>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://pradip-chaudhary.com.np/biography</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  <url>
+    <loc>http://pradip-chaudhary.com.np/media</loc>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  <url>
+    <loc>http://pradip-chaudhary.com.np/contact</loc>
+    <lastmod>2025-11-19</lastmod>
   </url>
 </urlset>
